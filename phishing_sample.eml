@@ -1,0 +1,34 @@
+Delivered-To: victim@example.com
+Received: by 2002:a17:907:1c8f:b0:99:0:0 with SMTP id victim-recv;
+        Sat, 01 Aug 2026 03:14:22 -0700 (PDT)
+Received: from mail-relay-internal.example.com (mail-relay-internal.example.com. [10.10.0.5])
+        by mx.google.com with SMTPS id abc123;
+        Sat, 01 Aug 2026 03:14:21 -0700 (PDT)
+Received: from smtp-out-shady.freehosting-mail.ru (smtp-out-shady.freehosting-mail.ru. [185.220.101.47])
+        by mail-relay-internal.example.com with ESMTP id def456;
+        Sat, 01 Aug 2026 03:14:18 -0700 (PDT)
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of noreply@paypa1-secure.com does not designate 185.220.101.47 as permitted sender) smtp.mailfrom=noreply@paypa1-secure.com;
+       dkim=fail (signature did not verify) header.d=paypa1-secure.com;
+       dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=paypal.com
+Return-Path: <bounce@paypa1-secure.com>
+Reply-To: security-team@paypa1-secure.com
+From: "PayPal Security" <alerts@paypal.com>
+To: victim@example.com
+Subject: URGENT: Your account has been suspended - Verify your identity immediately
+Date: Sat, 01 Aug 2026 03:14:15 -0700
+Message-ID: <a1b2c3d4@paypa1-secure.com>
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Customer,
+
+We have detected unusual activity on your account. Your account has been
+suspended and will be permanently closed unless you verify your identity
+immediately.
+
+Click here to confirm your identity within 24 hours:
+http://185.220.101.47/paypal-verify/login.php?session=8827aa
+
+Failure to act now will result in permanent suspension. This is a final notice.
+
+PayPal Security Team

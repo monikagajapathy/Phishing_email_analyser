@@ -1,0 +1,29 @@
+Delivered-To: teammate@example.com
+Received: by 2002:a17:907:1c8f:b0:99:0:0 with SMTP id teammate-recv;
+        Sat, 01 Aug 2026 09:02:10 -0700 (PDT)
+Received: from mail-relay-internal.example.com (mail-relay-internal.example.com. [10.10.0.5])
+        by mx.google.com with SMTPS id ghi789;
+        Sat, 01 Aug 2026 09:02:09 -0700 (PDT)
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mail-relay-internal.example.com with ESMTPS id jkl012;
+        Sat, 01 Aug 2026 09:02:05 -0700 (PDT)
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of priya@company.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=priya@company.com;
+       dkim=pass header.d=company.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=company.com
+Return-Path: <priya@company.com>
+From: "Priya Sharma" <priya@company.com>
+To: teammate@example.com
+Subject: Notes from today's sync
+Date: Sat, 01 Aug 2026 09:02:00 -0700
+Message-ID: <xyz987@company.com>
+Content-Type: text/plain; charset="UTF-8"
+
+Hi team,
+
+Quick recap from today's sync: we're aligned on shipping the v2 API by
+Friday. I'll send the updated doc by end of day. Let me know if I missed
+anything.
+
+Thanks,
+Priya

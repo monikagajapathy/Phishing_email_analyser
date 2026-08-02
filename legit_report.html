@@ -1,0 +1,48 @@
+<html>
+  <head>
+    
+    <title>Phishing Report</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, sans-serif; background:#f4f4f2; margin:0; padding:32px; color:#2c2c2a; }
+  .card { max-width:720px; margin:0 auto; background:#fff; border-radius:12px; padding:32px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .meta { color:#5f5e5a; font-size:14px; margin-bottom:20px; }
+  .score-wrap { display:flex; align-items:center; gap:20px; margin:20px 0; }
+  .score-num { font-size:42px; font-weight:700; color:#639922; }
+  .risk-badge { display:inline-block; padding:4px 14px; border-radius:20px; background:#63992222; color:#639922; font-weight:600; font-size:13px; letter-spacing:.5px; }
+  .bar-bg { flex:1; height:14px; background:#eee; border-radius:7px; overflow:hidden; }
+  .bar-fill { height:100%; background:#639922; width:0%; }
+  table { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+  td { padding:8px 6px; border-bottom:1px solid #eee; }
+  .pts { text-align:right; font-weight:600; white-space:nowrap; width:50px; }
+  .auth-row span { display:inline-block; margin-right:16px; padding:4px 10px; border-radius:6px; font-size:13px; font-weight:600; }
+  .pass { background:#EAF3DE; color:#3B6D11; }
+  .fail { background:#FCEBEB; color:#791F1F; }
+  .none { background:#F1EFE8; color:#5F5E5A; }
+</style></head>
+<body>
+  <div class="card">
+    <h1>Phishing analysis report</h1>
+    <div class="meta">samples/legit_sample.eml</div>
+    <div><b>Subject:</b> Notes from today's sync<br><b>From:</b> "Priya Sharma" <priya@company.com><br><b>Date:</b> Sat, 01 Aug 2026 09:02:00 -0700</div>
+
+    <div class="score-wrap">
+      <div class="score-num">0</div>
+      <div class="bar-bg"><div class="bar-fill"></div></div>
+      <div class="risk-badge">LOW RISK</div>
+    </div>
+
+    <div class="auth-row">
+      <span class="pass">SPF: pass</span>
+      <span class="pass">DKIM: pass</span>
+      <span class="pass">DMARC: pass</span>
+    </div>
+
+    <p><b>Originating IP:</b> 209.85.220.41 (public)</p>
+
+    <table>
+      <tr><td><b>Signal</b></td><td class="pts"><b>Points</b></td></tr>
+      <tr><td>SPF = pass</td><td class='pts'>0</td></tr><tr><td>DKIM = pass</td><td class='pts'>0</td></tr><tr><td>DMARC = pass</td><td class='pts'>0</td></tr>
+    </table>
+  </div>
+</body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Phishing Report</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, sans-serif; background:#f4f4f2; margin:0; padding:32px; color:#2c2c2a; }
+  .card { max-width:720px; margin:0 auto; background:#fff; border-radius:12px; padding:32px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .meta { color:#5f5e5a; font-size:14px; margin-bottom:20px; }
+  .score-wrap { display:flex; align-items:center; gap:20px; margin:20px 0; }
+  .score-num { font-size:42px; font-weight:700; color:#A32D2D; }
+  .risk-badge { display:inline-block; padding:4px 14px; border-radius:20px; background:#A32D2D22; color:#A32D2D; font-weight:600; font-size:13px; letter-spacing:.5px; }
+  .bar-bg { flex:1; height:14px; background:#eee; border-radius:7px; overflow:hidden; }
+  .bar-fill { height:100%; background:#A32D2D; width:100%; }
+  table { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+  td { padding:8px 6px; border-bottom:1px solid #eee; }
+  .pts { text-align:right; font-weight:600; white-space:nowrap; width:50px; }
+  .auth-row span { display:inline-block; margin-right:16px; padding:4px 10px; border-radius:6px; font-size:13px; font-weight:600; }
+  .pass { background:#EAF3DE; color:#3B6D11; }
+  .fail { background:#FCEBEB; color:#791F1F; }
+  .none { background:#F1EFE8; color:#5F5E5A; }
+</style></head>
+<body>
+  <div class="card">
+    <h1>Phishing analysis report</h1>
+    <div class="meta">samples/phishing_sample.eml</div>
+    <div><b>Subject:</b> URGENT: Your account has been suspended - Verify your identity immediately<br><b>From:</b> "PayPal Security" <alerts@paypal.com><br><b>Date:</b> Sat, 01 Aug 2026 03:14:15 -0700</div>
+
+    <div class="score-wrap">
+      <div class="score-num">100</div>
+      <div class="bar-bg"><div class="bar-fill"></div></div>
+      <div class="risk-badge">CRITICAL RISK</div>
+    </div>
+
+    <div class="auth-row">
+      <span class="fail">SPF: fail</span>
+      <span class="fail">DKIM: fail</span>
+      <span class="fail">DMARC: fail</span>
+    </div>
+
+    <p><b>Originating IP:</b> 185.220.101.47 (public)</p>
+
+    <table>
+      <tr><td><b>Signal</b></td><td class="pts"><b>Points</b></td></tr>
+      <tr><td>SPF = fail</td><td class='pts'>+20</td></tr><tr><td>DKIM = fail</td><td class='pts'>+20</td></tr><tr><td>DMARC = fail</td><td class='pts'>+20</td></tr><tr><td>Reply-To domain 'paypa1-secure.com' != From domain 'paypal.com'</td><td class='pts'>+15</td></tr><tr><td>Return-Path domain 'paypa1-secure.com' != From domain 'paypal.com'</td><td class='pts'>+15</td></tr><tr><td>Urgency/pressure keywords found: urgent, suspended, act now, immediately, click here, confirm your identity, unusual activity, final notice, your account has been</td><td class='pts'>+15</td></tr><tr><td>Link uses raw IP address instead of domain: http://185.220.101.47/paypal-verify/login.php?session=8827aa</td><td class='pts'>+15</td></tr>
+    </table>
+  </div>
+</body></html>
