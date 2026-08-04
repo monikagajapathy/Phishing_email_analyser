@@ -23,6 +23,56 @@ The project also includes a modern **React-based Security Operations Center (SOC
 * Generate a transparent phishing risk score.
 * Produce detailed HTML reports.
 * Demonstrate modern phishing detection using an interactive dashboard.
+# Dashboard
+
+![Dashboard](docs/dashboard.png)
+
+---
+
+# System Architecture
+
+![Architecture](docs/architecture.png)
+
+---
+
+# Security Pipeline
+
+![Pipeline](docs/pipeline.png)
+
+---
+
+# Phishing Report
+
+![Phishing Report](docs/phishing_report.png)
+
+---
+
+# Legitimate Report
+
+![Legitimate Report](docs/legit_report.png)
+
+
+# Clone the repository
+git clone https://github.com/monikagajapathy/Phishing_email_analyser.git
+
+# Navigate to the backend folder
+cd backend
+
+# To run
+**backend**
+cd backend
+pip install -r requirements.txt
+python phishing_analyzer.py
+
+# Frontend 
+cd frontend
+npm install
+npm run dev
+
+# No additional dependencies are required
+
+# Run the analyzer
+python phishing_analyzer.py phishing_sample.eml
 
 
 
@@ -175,45 +225,7 @@ Features
 * Dashboard analytics
 
 
-# Security Pipeline
 
-
-                 RAW EMAIL (.eml)
-                        │
-                        ▼
-             Email Header Parsing
-                        │
-                        ▼
-          Authentication Extraction
-                        │
-        ┌───────────────┼───────────────┐
-        ▼               ▼               ▼
-      SPF            DKIM            DMARC
-        │               │               │
-        └───────────────┼───────────────┘
-                        ▼
-          Routing & IP Address Analysis
-                        │
-                        ▼
-       Domain Alignment Verification
-                        │
-                        ▼
-        Reply-To & Return-Path Analysis
-                        │
-                        ▼
-        Keyword & URL Inspection
-                        │
-                        ▼
-         Heuristic Rule Evaluation
-                        │
-                        ▼
-            Suspiciousness Score
-                        │
-                        ▼
-           Threat Classification
-                        │
-                        ▼
-          HTML Report & React Dashboard
 
 
 

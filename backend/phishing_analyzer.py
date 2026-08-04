@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-"""
-Phishing Email Analyzer
-------------------------
-Parses a raw .eml file, checks SPF/DKIM/DMARC authentication results,
-extracts originating IP addresses, scans for common phishing red flags,
-and produces a suspiciousness score (0-100) with a human-readable report.
 
-Usage:
-    python3 phishing_analyzer.py sample.eml
-    python3 phishing_analyzer.py sample.eml --html report.html
-"""
 
 import argparse
 import email

@@ -1,0 +1,21 @@
+# ========================================
+# Phishing Email Analyzer Requirements
+# ========================================
+
+# Python Version
+# Python >= 3.10
+
+# DNS Queries (SPF, DKIM, DMARC)
+dnspython>=2.7.0
+
+# HTTP Requests (Threat Intelligence APIs)
+requests>=2.32.0
+
+# HTML Report Templating
+jinja2>=3.1.4
+
+# HTML Parsing
+beautifulsoup4>=4.12.3
+
+# Environment Variables
+python-dotenv>=1.0.1
