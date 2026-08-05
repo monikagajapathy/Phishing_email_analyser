@@ -56,18 +56,18 @@ The project also includes a modern **React-based Security Operations Center (SOC
 git clone https://github.com/monikagajapathy/Phishing_email_analyser.git
 
 # Navigate to the backend folder
-cd backend
+-cd backend
 
 # To run
 **backend**
-cd backend
-pip install -r requirements.txt
-python phishing_analyzer.py
+-cd backend
+-pip install -r requirements.txt
+-python phishing_analyzer.py
 
 # Frontend 
-cd frontend
-npm install
-npm run dev
+-cd frontend
+-npm install
+-npm run dev
 
 # No additional dependencies are required
 
